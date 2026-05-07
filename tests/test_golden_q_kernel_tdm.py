@@ -134,7 +134,15 @@ def test_baselines_replay(regime_id, tmp_path):
             if est_name in PLATFORM_UNSTABLE_ESTIMATORS:
                 continue
 
-            assert int(actual.n_finite) == expected_score["n_finite"]
+            # n_finite for raw_NCA / MAP_Bayesian can drift by ±1 across
+            # platforms when a subject's per-subject fit lands at a
+            # boundary case (log of a near-zero argument finite on Linux,
+            # NaN on macOS). Allow ±1 drift; this still detects any
+            # gross "no fits worked" regression.
+            assert abs(int(actual.n_finite) - expected_score["n_finite"]) <= 1, (
+                f"{cs.cell_id} / {est_name} n_finite drift: "
+                f"got {actual.n_finite}, expected {expected_score['n_finite']}"
+            )
 
             # Tolerant comparison: scipy.optimize / scipy.special inside
             # MAP_Bayesian drift at the ~1e-5 level across platforms.
