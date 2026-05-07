@@ -1,0 +1,22 @@
+FalsiFlyer — pre-registration + decision-rule-bound benchmark primitives.
+
+Copyright 2026 Mark Eatherly
+
+This product includes software developed by Mark Eatherly as part of the
+Subvurs research program (https://github.com/) — specifically, the
+Q-kernel-moat falsification methodology that motivated the package's design.
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The bundled adapters reference, but do not redistribute, the following
+external research artifacts:
+
+  * blackbox/impax — the Impax frequency-scanner kernel exercised by
+    adapters/impax_signal_disc and examples/parity_check_impax.py
+  * commercialization/path_c_nyxnet — the Questimator γ estimator and
+    nyxnet/q_blq_floor_detector.py kernel exercised by
+    adapters/q_kernel_tdm and examples/parity_check_7k.py
+
+Neither of those research artifacts is contained in this package; the
+adapters import them at runtime from their original paths. Their
+licensing terms are separate from this distribution.

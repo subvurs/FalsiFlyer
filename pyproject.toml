@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "falsiflyer"
+version = "0.2.0"
+description = "Falsification-as-a-Service: hash-committed datasets, proper-baseline templates, decision-rule-bound benchmarks, and signed audit-trail bundles."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [
+    { name = "Mark Eatherly" }
+]
+keywords = [
+    "benchmark",
+    "falsification",
+    "pre-registration",
+    "audit",
+    "reproducibility",
+    "ed25519",
+    "hash-chain",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+    "Typing :: Typed",
+]
+dependencies = [
+    "numpy>=1.23",
+    "pydantic>=2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/subvurs/FalsiFlyer"
+Repository = "https://github.com/subvurs/FalsiFlyer"
+Issues = "https://github.com/subvurs/FalsiFlyer/issues"
+Documentation = "https://github.com/subvurs/FalsiFlyer/tree/main/docs"
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+scipy = ["scipy>=1.10"]
+audit = ["cryptography>=41.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["falsiflyer*", "adapters*"]

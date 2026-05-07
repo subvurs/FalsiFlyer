@@ -1,0 +1,17 @@
+{
+  "dataset_sha256": "e03f62330ef16211b78dd34c5d8002a3470ba3ae5f9d1463b0cd1c77312be335",
+  "decision_rule_hash": "a024a65f5c50c5187d9923c7d751730509bd7578816a8a7da58dc2a4a3382468",
+  "kernel": "nyxnet.questimator.estimate_gamma(method='questimator')",
+  "n_pass_all_baselines": 0,
+  "n_pass_each_baseline": {
+    "MAP_Bayesian": 6,
+    "MAP_Proportional": 3,
+    "raw_NCA": 12,
+    "stderr_Shrunk_NCA": 9
+  },
+  "n_stress_cells": 12,
+  "regime_id": "7k",
+  "required_n_passing": 8,
+  "schema_version": "q_kernel_tdm_7k",
+  "verdict_pass": false
+}

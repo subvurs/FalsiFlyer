@@ -1,0 +1,848 @@
+{
+  "cells": [
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.373622,
+          "median_rel_err": 0.202875,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.187734,
+          "median_rel_err": 0.144273,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.610371,
+          "median_rel_err": 0.313178,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.406254,
+          "median_rel_err": 0.262276,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.05_n=2_CV=0.10",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.646066,
+          "median_rel_err": 0.339114,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.360234,
+          "median_rel_err": 0.253302,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 1.043942,
+          "median_rel_err": 0.556296,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.581277,
+          "median_rel_err": 0.364671,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.05_n=2_CV=0.20",
+      "is_stress_cell": true,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.837991,
+          "median_rel_err": 0.461233,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.485245,
+          "median_rel_err": 0.303476,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 1.35082,
+          "median_rel_err": 0.710858,
+          "n_finite": 29,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.751867,
+          "median_rel_err": 0.486028,
+          "n_finite": 31,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.05_n=2_CV=0.30",
+      "is_stress_cell": true,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.362949,
+          "median_rel_err": 0.187973,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.179259,
+          "median_rel_err": 0.169407,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.556674,
+          "median_rel_err": 0.265114,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.406967,
+          "median_rel_err": 0.222732,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.05_n=3_CV=0.10",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.548099,
+          "median_rel_err": 0.266693,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.348542,
+          "median_rel_err": 0.321427,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.793721,
+          "median_rel_err": 0.453735,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.567032,
+          "median_rel_err": 0.428398,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.05_n=3_CV=0.20",
+      "is_stress_cell": true,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.71179,
+          "median_rel_err": 0.418105,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.619419,
+          "median_rel_err": 0.46365,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 1.012126,
+          "median_rel_err": 0.651842,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.693402,
+          "median_rel_err": 0.616238,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.05_n=3_CV=0.30",
+      "is_stress_cell": true,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.301807,
+          "median_rel_err": 0.2104,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.140851,
+          "median_rel_err": 0.100248,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.489417,
+          "median_rel_err": 0.296076,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.382951,
+          "median_rel_err": 0.244805,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.05_n=4_CV=0.10",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.476059,
+          "median_rel_err": 0.338077,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.28013,
+          "median_rel_err": 0.182537,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.745002,
+          "median_rel_err": 0.556659,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.57511,
+          "median_rel_err": 0.456675,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.05_n=4_CV=0.20",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.640992,
+          "median_rel_err": 0.38398,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.478729,
+          "median_rel_err": 0.310264,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.991321,
+          "median_rel_err": 0.723138,
+          "n_finite": 30,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.728032,
+          "median_rel_err": 0.635882,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.05_n=4_CV=0.30",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.373623,
+          "median_rel_err": 0.202876,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.187734,
+          "median_rel_err": 0.144272,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.610371,
+          "median_rel_err": 0.313178,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.406254,
+          "median_rel_err": 0.262276,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.10_n=2_CV=0.10",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.646066,
+          "median_rel_err": 0.339113,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.360234,
+          "median_rel_err": 0.253302,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 1.043942,
+          "median_rel_err": 0.556296,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.581277,
+          "median_rel_err": 0.364671,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.10_n=2_CV=0.20",
+      "is_stress_cell": true,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.837991,
+          "median_rel_err": 0.461232,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.485245,
+          "median_rel_err": 0.303475,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 1.35082,
+          "median_rel_err": 0.710858,
+          "n_finite": 29,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.751867,
+          "median_rel_err": 0.486028,
+          "n_finite": 31,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.10_n=2_CV=0.30",
+      "is_stress_cell": true,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.362949,
+          "median_rel_err": 0.187973,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.179259,
+          "median_rel_err": 0.169407,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.556674,
+          "median_rel_err": 0.265114,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.406967,
+          "median_rel_err": 0.222732,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.10_n=3_CV=0.10",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.5481,
+          "median_rel_err": 0.266693,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.348542,
+          "median_rel_err": 0.321427,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.793721,
+          "median_rel_err": 0.453735,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.567032,
+          "median_rel_err": 0.428398,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.10_n=3_CV=0.20",
+      "is_stress_cell": true,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.71179,
+          "median_rel_err": 0.418104,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.61942,
+          "median_rel_err": 0.46365,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 1.012126,
+          "median_rel_err": 0.651842,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.693402,
+          "median_rel_err": 0.616238,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.10_n=3_CV=0.30",
+      "is_stress_cell": true,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.301807,
+          "median_rel_err": 0.2104,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.140851,
+          "median_rel_err": 0.100248,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.489417,
+          "median_rel_err": 0.296076,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.382951,
+          "median_rel_err": 0.244805,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.10_n=4_CV=0.10",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.476059,
+          "median_rel_err": 0.338077,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.28013,
+          "median_rel_err": 0.182538,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.745002,
+          "median_rel_err": 0.556659,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.57511,
+          "median_rel_err": 0.456675,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.10_n=4_CV=0.20",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.640991,
+          "median_rel_err": 0.38398,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.478729,
+          "median_rel_err": 0.310262,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.991321,
+          "median_rel_err": 0.723138,
+          "n_finite": 30,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.728032,
+          "median_rel_err": 0.635882,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.10_n=4_CV=0.30",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.373623,
+          "median_rel_err": 0.202876,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.187734,
+          "median_rel_err": 0.144272,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.610371,
+          "median_rel_err": 0.313178,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.406254,
+          "median_rel_err": 0.262276,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.20_n=2_CV=0.10",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.646066,
+          "median_rel_err": 0.339114,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.360234,
+          "median_rel_err": 0.253301,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 1.043942,
+          "median_rel_err": 0.556296,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.581277,
+          "median_rel_err": 0.364671,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.20_n=2_CV=0.20",
+      "is_stress_cell": true,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.838005,
+          "median_rel_err": 0.461236,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.81533,
+          "median_rel_err": 0.332404,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 1.35082,
+          "median_rel_err": 0.710858,
+          "n_finite": 30,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.682833,
+          "median_rel_err": 0.52984,
+          "n_finite": 31,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.20_n=2_CV=0.30",
+      "is_stress_cell": true,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.362949,
+          "median_rel_err": 0.187974,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.179259,
+          "median_rel_err": 0.169407,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.556674,
+          "median_rel_err": 0.265114,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.406967,
+          "median_rel_err": 0.222732,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.20_n=3_CV=0.10",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.5481,
+          "median_rel_err": 0.266693,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.348542,
+          "median_rel_err": 0.321428,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.793721,
+          "median_rel_err": 0.453735,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.567032,
+          "median_rel_err": 0.428398,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.20_n=3_CV=0.20",
+      "is_stress_cell": true,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.71179,
+          "median_rel_err": 0.418104,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.619419,
+          "median_rel_err": 0.463649,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 1.012126,
+          "median_rel_err": 0.651842,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.693402,
+          "median_rel_err": 0.616238,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.20_n=3_CV=0.30",
+      "is_stress_cell": true,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.301807,
+          "median_rel_err": 0.2104,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.140851,
+          "median_rel_err": 0.100248,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.489417,
+          "median_rel_err": 0.296076,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.382951,
+          "median_rel_err": 0.244805,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.20_n=4_CV=0.10",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.476059,
+          "median_rel_err": 0.338076,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.28013,
+          "median_rel_err": 0.182538,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.745002,
+          "median_rel_err": 0.556659,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.57511,
+          "median_rel_err": 0.456675,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.20_n=4_CV=0.20",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    },
+    {
+      "baselines": {
+        "MAP_Bayesian": {
+          "mean_rel_err": 0.640991,
+          "median_rel_err": 0.38398,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "MAP_Proportional": {
+          "mean_rel_err": 0.478729,
+          "median_rel_err": 0.310264,
+          "n_finite": 32,
+          "n_total": 32
+        },
+        "raw_NCA": {
+          "mean_rel_err": 0.991321,
+          "median_rel_err": 0.723138,
+          "n_finite": 30,
+          "n_total": 32
+        },
+        "stderr_Shrunk_NCA": {
+          "mean_rel_err": 0.728032,
+          "median_rel_err": 0.635882,
+          "n_finite": 32,
+          "n_total": 32
+        }
+      },
+      "cell_id": "k=0.20_n=4_CV=0.30",
+      "is_stress_cell": false,
+      "n_subjects": 32
+    }
+  ],
+  "dataset_sha256": "de5be0e21baa3aa5f5acc6d63a84192f663665d1df4946d1a7c831d11a701965",
+  "decision_rule_hash": "a024a65f5c50c5187d9923c7d751730509bd7578816a8a7da58dc2a4a3382468",
+  "n_cells": 27,
+  "n_stress_cells": 12,
+  "n_subjects": 864,
+  "regime_id": "7j",
+  "schema_version": "q_kernel_tdm_7j"
+}
