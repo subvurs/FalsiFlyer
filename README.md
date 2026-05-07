@@ -1,5 +1,10 @@
 # FalsiFlyer
 
+[![PyPI version](https://img.shields.io/pypi/v/falsiflyer.svg)](https://pypi.org/project/falsiflyer/)
+[![Python versions](https://img.shields.io/pypi/pyversions/falsiflyer.svg)](https://pypi.org/project/falsiflyer/)
+[![License](https://img.shields.io/pypi/l/falsiflyer.svg)](https://github.com/subvurs/FalsiFlyer/blob/main/LICENSE)
+[![CI](https://github.com/subvurs/FalsiFlyer/actions/workflows/ci.yml/badge.svg)](https://github.com/subvurs/FalsiFlyer/actions/workflows/ci.yml)
+
 `FalsiFlyer` is the domain-agnostic methodology package extracted from the
 ApotheQuery / Q-kernel-moat falsification audit trail (`#7e`–`#7k`).
 
