@@ -62,6 +62,33 @@ def test_canonical_hash_field_set_matters():
     assert h_ts != h_full
 
 
+def test_canonical_hash_invariant_under_sub_ulp_noise():
+    """SHA must be invariant under platform-libm-level noise.
+
+    Mutations below the 12-decimal-place hash quantization (1e-12 abs)
+    should NOT change the digest. This is what makes the hash portable
+    across macOS Accelerate and Linux glibc/SVML transcendentals.
+    """
+    cells = _toy_cells()
+    h0 = canonical_hash(cells, hash_fields=("t", "F_hat", "seed"))
+
+    # Apply a 1e-15 perturbation — well below the 1e-12 quantization
+    # threshold. Hash MUST be invariant.
+    cells[0].subjects[0].payload["F_hat"] = [
+        v + 1e-15 for v in cells[0].subjects[0].payload["F_hat"]
+    ]
+    h_noise = canonical_hash(cells, hash_fields=("t", "F_hat", "seed"))
+    assert h_noise == h0, "hash must be invariant under sub-ULP libm noise"
+
+    # Apply a 1e-9 perturbation — three orders of magnitude ABOVE the
+    # quantization threshold. Hash MUST change.
+    cells[0].subjects[0].payload["F_hat"] = [
+        v + 1e-9 for v in cells[0].subjects[0].payload["F_hat"]
+    ]
+    h_real = canonical_hash(cells, hash_fields=("t", "F_hat", "seed"))
+    assert h_real != h0, "hash must detect changes above quantization threshold"
+
+
 def test_freeze_and_load_roundtrip(tmp_path: Path):
     cells = _toy_cells()
     rule = DecisionRule(

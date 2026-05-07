@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1] — 2026-05-07
+
+### Fixed
+
+- **Platform-portable canonical hash.** `canonical_hash` (and therefore
+  `Dataset.sha256_data_payload`) now rounds float values to 12 decimal
+  places before hashing. Previously, sub-ULP libm divergence on
+  transcendentals (`np.exp`, `np.log`) between macOS Accelerate and
+  Linux glibc/SVML produced different SHAs for byte-equivalent datasets,
+  breaking the byte-identical-anchor guarantee on cross-platform CI.
+  The new quantization sits ~4 orders of magnitude above the libm noise
+  floor (~2e-16 abs), so the digest is now invariant across CPython
+  builds, OS libms, and BLAS backends, while still detecting any change
+  above 1e-12.
+  - New module-level constant `falsiflyer.prereg.HASH_FLOAT_DECIMALS = 12`.
+  - New invariance test `test_canonical_hash_invariant_under_sub_ulp_noise`.
+  - Golden fixtures in `tests/golden/` regenerated under the new hash.
+
+### Compatibility
+
+- This is a **breaking change for any v0.2.0-anchored audit ledger**:
+  the SHA-256 of a frozen dataset built with v0.2.0 will not match the
+  SHA-256 of the same dataset rebuilt under v0.2.1. v0.2.0 was released
+  the same day; we are upgrading the hash before any external ledger
+  has been published. Going forward the hash is locked.
+
 ## [0.2.0] — 2026-05-06
 
 ### Added
@@ -84,5 +110,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `docs/ADAPTER_GUIDE.md`.
 - 47 tests covering all five primitives + both adapters.
 
+[0.2.1]: #
 [0.2.0]: #
 [0.1.0]: #

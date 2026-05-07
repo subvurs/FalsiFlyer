@@ -108,11 +108,47 @@ class DecisionRule(BaseModel):
 HashFieldSpec = Iterable[str]
 
 
+# Decimal places preserved when hashing floats. 12 dp absorbs the
+# 1-2 ULP libm divergence between platforms (macOS Accelerate vs Linux
+# glibc/SVML for transcendentals like ``exp`` / ``log``) while keeping
+# 4 orders of magnitude of headroom over the noise floor (~2e-16 abs).
+# Without this rounding, ``canonical_hash`` is platform-dependent, which
+# breaks the byte-identical-anchor guarantee.
+HASH_FLOAT_DECIMALS = 12
+
+
+def _quantize_float(x: float) -> float:
+    """Round a float to ``HASH_FLOAT_DECIMALS`` for platform-stable hashing.
+
+    Non-finite values (``nan``, ``inf``) pass through unchanged so they
+    still hash to a distinct, deterministic byte pattern.
+    """
+    if not np.isfinite(x):
+        return x
+    return float(round(x, HASH_FLOAT_DECIMALS))
+
+
+def _quantize_array(arr: np.ndarray) -> np.ndarray:
+    """Round a float ndarray to ``HASH_FLOAT_DECIMALS`` for stable hashing."""
+    if arr.dtype.kind != "f":
+        return arr
+    out = np.round(arr, HASH_FLOAT_DECIMALS)
+    # Preserve non-finite entries verbatim (round() on np.inf returns np.inf
+    # already; this is defensive against future numpy changes).
+    mask = ~np.isfinite(arr)
+    if mask.any():
+        out[mask] = arr[mask]
+    return out
+
+
 def _hash_value(h: "hashlib._Hash", label: str, value: Any) -> None:
     """Append ``label=...`` for one value, choosing a canonical encoding.
 
-    * arrays / lists of floats → ``np.asarray(...).tobytes()`` (locks the
-      bit pattern; identical to the #7j generator).
+    Floats are rounded to ``HASH_FLOAT_DECIMALS`` decimal places before
+    hashing so the digest is invariant across platforms (libm divergence
+    on ``exp``/``log`` is sub-ULP and well below the rounding threshold).
+
+    * arrays / lists of floats → quantized float64 ``.tobytes()``.
     * lists of ints            → ``np.asarray(..., dtype=np.int64).tobytes()``.
     * str/int/float/bool/None  → JSON-encoded then UTF-8.
     """
@@ -124,10 +160,11 @@ def _hash_value(h: "hashlib._Hash", label: str, value: Any) -> None:
         h.update(json.dumps(value, sort_keys=True).encode("utf-8"))
         return
     if isinstance(value, float):
-        h.update(np.asarray([value], dtype=np.float64).tobytes())
+        h.update(np.asarray([_quantize_float(value)], dtype=np.float64).tobytes())
         return
     if isinstance(value, np.ndarray):
-        h.update(np.ascontiguousarray(value).tobytes())
+        arr = _quantize_array(np.ascontiguousarray(value))
+        h.update(np.ascontiguousarray(arr).tobytes())
         return
     if isinstance(value, (list, tuple)):
         if len(value) == 0:
@@ -137,7 +174,8 @@ def _hash_value(h: "hashlib._Hash", label: str, value: Any) -> None:
             h.update(np.asarray(value, dtype=np.int64).tobytes())
             return
         if all(isinstance(v, (int, float)) and not isinstance(v, bool) for v in value):
-            h.update(np.asarray(value, dtype=np.float64).tobytes())
+            arr = _quantize_array(np.asarray(value, dtype=np.float64))
+            h.update(arr.tobytes())
             return
         # mixed/nested — fall through to JSON
         h.update(json.dumps(value, sort_keys=True, default=str).encode("utf-8"))
